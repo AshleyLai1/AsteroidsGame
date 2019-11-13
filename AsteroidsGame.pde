@@ -1,20 +1,19 @@
 //your variable declarations here
-//int x,y;
 //myColor = color(193);
 ArrayList <Integer> asteroid;
-Spaceship [] ship;
+//Spaceship ship;
 
 
 public void setup() 
 {
 	size(300,300);
-	ship = new Spaceship [1];
+	Spaceship ship = new Spaceship();
   //your code here
 }
 public void draw() 
 {
   //your code here
-  //ship.show();
+  ship.show();
 }
 class Spaceship extends Floater
 {
@@ -29,8 +28,13 @@ class Spaceship extends Floater
 	void move(){
 
 	}
+	public void setDirectionX(){
+		myDirectionX = x;
+	}
 }
 public void keyPressed(){
-
+	if(key == 'h'){
+		ship.setDirectionX(0);
+	}
 }
 
