@@ -1,5 +1,6 @@
 //your variable declarations here
 //myColor = color(193);
+
 ArrayList <Integer> asteroid;
 Spaceship ship;
 
@@ -7,7 +8,6 @@ Spaceship ship;
 public void setup() 
 {
 	size(300,300);
-	//Spaceship ship = new Spaceship();
   //your code here
 }
 public void draw() 
@@ -16,5 +16,5 @@ public void draw()
   ship = new Spaceship();
   ship.show();
 }
-
+//make hyperspace here \
 
