@@ -15,6 +15,9 @@ public void draw()
   //your code here
   ship = new Spaceship();
   ship.show();
+  ship.move();
 }
 //make hyperspace here \
-
+public void keyPressed(){
+	
+}
