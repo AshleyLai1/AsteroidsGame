@@ -1,23 +1,46 @@
-//your variable declarations here
-//myColor = color(193);
-
-ArrayList <Integer> asteroid;
 Spaceship ship;
-
+Star [] stars = new Star[500];
 
 public void setup() 
 {
-	size(300,300);
+	size(1000,1000);
+	for(int i=0; i<500; i++){
+		stars[i] = new Star();
+	}
+	ship = new Spaceship();
   //your code here
 }
 public void draw() 
 {
   //your code here
-  ship = new Spaceship();
+  
+  background(0);
   ship.show();
   ship.move();
+
+  for(int i =0; i<200;i++){
+  	stars[i].show();
+  }
 }
 //make hyperspace here \
 public void keyPressed(){
-	
+	if(key == 'f'){
+		ship.setX((int)(Math.random()*1000)+1);
+		ship.setY((int)(Math.random()*1000)+1);
+		ship.setDirectionX((double)(0.0));
+		ship.setDirectionY((double)(0.0));
+		ship.setPointDirection((int)(Math.random()*360)+1);
+	}
+	if(key == 'w'){
+		ship.accelerate(0.8);
+	}
+	if(key == 'a'){
+		ship.turn(-8);
+	}
+	if(key == 's'){
+		ship.accelerate(-0.8);
+	}
+	if(key == 'd'){
+		ship.turn(8);
+	}
 }
