@@ -1,5 +1,6 @@
 Spaceship ship;
 Star [] stars = new Star[500];
+ArrayList <Asteroid> chicken = new ArrayList <Asteroid>();
 
 public void setup() 
 {
@@ -9,6 +10,9 @@ public void setup()
 	}
 	ship = new Spaceship();
   //your code here
+  for(int i =0;i <25;i++){
+  	chicken.add(new Asteroid());
+  }
 }
 public void draw() 
 {
@@ -20,6 +24,10 @@ public void draw()
 
   for(int i =0; i<200;i++){
   	stars[i].show();
+  }
+  for(int i =0;i<chicken.size();i++){
+  	chicken.get(i).show();
+  	chicken.get(i).move();
   }
 }
 //make hyperspace here \
